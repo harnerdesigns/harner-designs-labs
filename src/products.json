@@ -2,13 +2,13 @@
 
 	"w9":{
 		"title": "W9 as SVG",
-		"URL": "http://lab.harnerdesigns.com/w9/",
+		"URL": "https://lab.harnerdesigns.com/w9/",
 		"image": "https://images.unsplash.com/photo-1519377661616-bbec03d2bd68?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
 	},
 	"osx": {
 		"title": "Mac OS X in HTML",
-		"URL": "http://lab.harnerdesigns.com/osx/",
-		"image": "https://harnerdesigns.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-17-at-14.53.40-fullpage.png"
+		"URL": "https://lab.harnerdesigns.com/osx/",
+		"image": "https://harnerdesigns.com/wp-content/uploads/2019/01/Screen-Shot-2019-01-17-at-14.53.40-fullpage-e1547762208720.png"
 	}
   
 }
