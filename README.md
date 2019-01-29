@@ -1,2 +1,2 @@
-# [Harner Designs Labs](https://labs.harnerdesigns.com)
+# [Harner Designs Labs](https://lab.harnerdesigns.com)
 A place for me to fuck around.
