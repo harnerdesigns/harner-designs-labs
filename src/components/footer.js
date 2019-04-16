@@ -6,7 +6,7 @@ class Footer extends Component {
 	render(){
  
 		return(<footer className="App-footer">
-          <section className="copyright">Copyright 2019 Harner Designs</section>
+          <section className="copyright">&copy; 2019 Harner Designs</section>
 
                   </footer>
         )

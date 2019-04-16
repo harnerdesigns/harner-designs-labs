@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1,
@@ -7,171 +7,186 @@ h2,
 h3,
 h4,
 h5 {
-    margin: 0;
+  margin: 0;
 }
 
-
-
-
-
-$mainColor: #3F51B5;
-$accentColor: #4CAF50;
+$mainColor: #3f51b5;
+$accentColor: #4caf50;
 $box-shadow: 0px 1px 5px -1px transparentize(#000, 0.4);
 
-body{
-    background:#333;
+body {
+  background: #333;
 
-    font-family:"Roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 header {
-    background: $mainColor;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.5em 10vw;
-    box-shadow: $box-shadow;
-    z-index: 9999;
-    position: relative;
+  background: $mainColor;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em 10vw;
+  box-shadow: $box-shadow;
+  z-index: 9999;
+  position: relative;
 
-    .logo{width: 50%;}
+  .logo {
+    width: 50%;
+  }
 }
 
-
 nav {
-    ul {
+  ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
 
-        display: flex;
-        margin: 0;
-        padding: 0;
-
-        li {
-            list-style: none;
-            color: #fff;
-            padding: 0.25em;
-        }
+    li {
+      list-style: none;
+      color: #fff;
+      padding: 0.25em;
     }
+  }
 }
 
 #contentArea {
-    min-height: 80vh;
-    padding: 1em 10vw;
+  min-height: 60vh;
+width: 100%;
+  padding: 1em 10vw;
 }
-
 
 footer {
-
-    width: 100%;
-    background: #333;
-    color: #fff;
-    padding: 1em 10vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  background: #333;
+  color: #fff;
+  padding: 1em 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.intro{
-
-    margin: 10vw 0;
+.intro {
+  padding: 2vw 0;
+  background: darken($mainColor, 10);
 }
 
+.quote {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 100;
+  color: #fff;
+  width: 80%;
+  margin: 0 auto;
 
-.quote{
-
-    text-align:center;
-    font-size: 3em; 
-    font-weight: 100;
-    color:#fff;
-    width: 80%;
-    margin: 0 auto;
-
-    b{font-weight: 900;}
+  b {
+    font-weight: 900;
+  }
 }
 
-.cite{
-    text-align:right;
-    font-size: 1.52em; 
-    font-weight: 100;
-    color:#fff;
-    width: 80%;
-    margin: 0 auto;
-    padding: 0 5vw;
+.cite {
+  text-align: right;
+  font-size: 1.25em;
+  font-weight: 100;
+  color: #fff;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 5vw;
 }
-
-
-
 
 .grid {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .card {
-    width: 20%;
-    max-width: 50%;
-    box-shadow: $box-shadow;
-    margin: 0.5em;
-    padding: 0.5em;
-    flex: 1 0 auto;
-    background:#fff;
+  width: 20%;
+  max-width: 50%;
+  box-shadow: $box-shadow;
+  margin: 0.5em;
+  padding: 0.5em;
+  flex: 1 0 auto;
+  background: #fff;
 
-    img {
-        width: 100%;
-        height: auto;
-    }
+  img {
+    width: 100%;
+    height: auto;
+  }
+
 }
 
 a {
-    color: $mainColor;
-    text-decoration: none;
-    transition: all 200ms;
+  color: $mainColor;
+  text-decoration: none;
+  transition: all 200ms;
 
-    &:hover {
-        color: darken($mainColor, 10);
-    }
+  &:hover {
+    color: darken($mainColor, 10);
+  }
 }
 
 .product-title {
-    text-align: center;
-    font-size:2em;
+  text-align: center;
+  font-size: 2em;
 
-    a {
-        color: $mainColor;
-    }
-
-
+  a {
+    color: $mainColor;
+  }
 }
 
 .product-meta {
-    font-size: 1.5em;
-    width: 50%;
-    margin: 0 auto;
+  font-size: 1.5em;
+  width: 50%;
+  margin: 0 auto;
 }
 
+.heading {
+  color: #fff;
+  text-align: center;
+  font-size: 5em;
+  position: relative;
+  margin-bottom: 0.25em;
+  &:before,
+  &:after {
+    content: "";
+    height: 3px;
+    width: 25%;
+    background: #fff;
+    display: block;
+    position: absolute;
+    top: 50%;
+  }
 
+  &:before {
+    left: 0;
+  }
+
+  &:after {
+    right: 0;
+  }
+}
 
 .App-banners {
+  .banner {
+    padding: 3em 0;
+    text-align: center;
+    color: #fff;
+    background: darken($mainColor, 10);
+    box-shadow: $box-shadow;
 
-    .banner {
-
-        padding: 3em 0;
-        text-align: center;
-        color: #fff;
-        background: darken($mainColor, 10);
-        box-shadow: $box-shadow;
-
-        &:nth-of-type(2){
-            background: darken($accentColor, 20);
-        padding: 1.5em 0;
-
-        }
-
+    &:nth-of-type(2) {
+      background: darken($accentColor, 20);
+      padding: 1.5em 0;
     }
+  }
 
-    h1 {
-        font-size: 2em;
-    }
+  h1 {
+    font-size: 2em;
+  }
+}
+
+footer {
+  background: #222;
 }

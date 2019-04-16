@@ -16,10 +16,7 @@ class Main extends Component {
 
         return (
             <main id="contentArea">
-            <section className="intro">
-            <h2 className="quote">The Only Difference Between <b>Screwing Around</b> And <b>Science</b> Is <i>Writing It Down</i></h2>
-            <h3 className="cite"> - Adam Savage</h3>
-            </section>
+            <h1 className='heading'>Experiments</h1>
             <section className="grid">
         {arr.map(item => <Product name={item.title}  sku={item.key}  url={item.URL} image={item.image}/>)}
         </section>
