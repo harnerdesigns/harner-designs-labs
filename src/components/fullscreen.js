@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
-
 class Fullscreen extends Component {
 
 
