@@ -54,6 +54,8 @@ nav {
   min-height: 60vh;
 width: 100%;
   padding: 1em 10vw;
+  transition: all 300ms;
+
 }
 
 footer {
@@ -109,6 +111,14 @@ footer {
   padding: 0.5em;
   flex: 1 0 auto;
   background: #fff;
+  &.open-false{
+      transition: all 150ms;
+      cursor: pointer;
+
+        &:hover{
+            transform: scale(1.01);
+        }
+    }
 
   img {
     width: 100%;
@@ -187,6 +197,19 @@ a {
   }
 }
 
+
+
+@keyframes modalFade {
+  from {transform: scale(0);opacity: 0;}
+  to {transform: scale(1);opacity: 1;}
+}
+
+.modal {
+  animation-name: modalFade;
+  animation-duration: .3s;
+}
+
 footer {
   background: #222;
 }
+

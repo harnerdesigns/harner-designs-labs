@@ -18,14 +18,14 @@ class Product extends Component {
 	}
 
 	toggleModal = () => {
-		if(this.state.isOpen){
+		this.setState({
+			isOpen: !this.state.isOpen
+		});
+		if (this.state.isOpen) {
 			enableBodyScroll(this.targetElement);
 		} else {
 			disableBodyScroll(this.targetElement);
 		}
-		this.setState({
-			isOpen: !this.state.isOpen
-		});
 
 	}
 
@@ -37,13 +37,13 @@ class Product extends Component {
 		clearAllBodyScrollLocks();
 	}
 
-	render(){
+	render() {
 
 
 
 
-		return(
-			<div className="card">
+		return (
+			<div className={"card open-" + this.state.isOpen}>
 				<img src={this.props.image} alt={this.props.name} onClick={this.toggleModal} />
 				<h1 className="product-title" onClick={this.toggleModal}>{this.props.name}</h1>
 
@@ -51,7 +51,7 @@ class Product extends Component {
 				<Fullscreen Title={this.props.name} show={this.state.isOpen} url={this.props.url} description={this.props.description}
 					onClose={this.toggleModal} />
 			</div>
-			)
+		)
 
 	}
 
