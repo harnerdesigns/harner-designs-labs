@@ -4,6 +4,13 @@ import Main from './components/main';
 import Footer from './components/footer';
 import './App.scss';
 
+
+//FontAwesome
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faTimes, faExpand, faFlask } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faTimes, faExpand, faFlask) 
+
 class App extends Component {
   render() {
     return (

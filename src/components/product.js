@@ -22,9 +22,15 @@ class Product extends Component {
 			isOpen: !this.state.isOpen
 		});
 		if (this.state.isOpen) {
+
 			enableBodyScroll(this.targetElement);
 		} else {
-			disableBodyScroll(this.targetElement);
+
+			setTimeout(() => { disableBodyScroll(this.targetElement) }, 100)
+
+
+
+
 		}
 
 	}

@@ -20,19 +20,33 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-header {
+.App-header {
   background: $mainColor;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5em 10vw;
+  padding: 0.1em 10vw;
   box-shadow: $box-shadow;
   z-index: 9999;
   position: relative;
-
+  font-size: 6em;
+  font-weight: 100;
+  svg {
+    margin-right: 0.25em;
+    font-size: 1em;
+  }
+  b {
+    margin: 0;
+    font-weight: 900;
+    font-style: italic;
+  }
+  span {
+    font-size: 0.5em;
+  }
   .logo {
-    width: 50%;
+    width: auto;
+    height: 1em;
   }
 }
 
@@ -52,10 +66,9 @@ nav {
 
 #contentArea {
   min-height: 60vh;
-width: 100%;
+  width: 100%;
   padding: 1em 10vw;
   transition: all 300ms;
-
 }
 
 footer {
@@ -97,34 +110,35 @@ footer {
 }
 
 .grid {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-row-gap:20px;
+  grid-column-gap:20px;
+  align-items: start;
 }
 
 .card {
-  width: 20%;
-  max-width: 50%;
+  width: 100%;
   box-shadow: $box-shadow;
   margin: 0.5em;
   padding: 0.5em;
   flex: 1 0 auto;
   background: #fff;
-  &.open-false{
-      transition: all 150ms;
-      cursor: pointer;
+  min-height: 0;  /* NEW */
+  min-width: 0;   
+  &.open-false {
+    transition: all 150ms;
+    cursor: pointer;
 
-        &:hover{
-            transform: scale(1.01);
-        }
+    &:hover {
+      transform: scale(1.01);
     }
+  }
 
   img {
     width: 100%;
     height: auto;
   }
-
 }
 
 a {
@@ -197,19 +211,54 @@ a {
   }
 }
 
-
-
 @keyframes modalFade {
-  from {transform: scale(0);opacity: 0;}
-  to {transform: scale(1);opacity: 1;}
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 .modal {
   animation-name: modalFade;
-  animation-duration: .3s;
+  animation-duration: 0.3s;
+
+  .modal--header {
+    background: $mainColor;
+    color: #fff;
+    padding: 0 10vw;
+
+    a {
+      color: #fff;
+      font-size: 2em;
+
+      &:first-of-type {
+        margin-left: auto;
+      }
+    }
+
+    button {
+      font-size: 2em;
+      background: none;
+      color: #fff;
+      border: none;
+      padding: 0;
+    }
+
+    a,
+    button {
+      cursor: pointer;
+      transition: all 300ms;
+      &:hover {
+        color: transparentize($color: #fff, $amount: 0.4);
+      }
+    }
+  }
 }
 
 footer {
   background: #222;
 }
-

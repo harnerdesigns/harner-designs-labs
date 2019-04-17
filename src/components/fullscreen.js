@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Fullscreen extends Component {
 
@@ -50,10 +51,13 @@ class Fullscreen extends Component {
             <div className="backdrop" style={backdropStyle}>
                 <div className="modal" style={modalStyle}>
                     <header className="modal--header" style={headerStyle}>
-                    <h1>{this.props.Title}</h1>
-                    <button onClick={this.props.onClose}>
-                        Close
-            </button>
+                        <h1>{this.props.Title}</h1>
+                        <a href={this.props.url} >
+                            <FontAwesomeIcon icon="expand" className='fa-fw' />
+                        </a>
+                        <button onClick={this.props.onClose}>
+                            <FontAwesomeIcon icon="times" className='fa-fw' />
+                        </button>
                     </header>
                     <iframe style={iframeStyle} src={this.props.url} title={this.props.Title} ></iframe>
                 </div>
