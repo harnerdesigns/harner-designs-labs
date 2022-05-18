@@ -115,6 +115,7 @@ footer {
   grid-row-gap:20px;
   grid-column-gap:20px;
   align-items: start;
+  margin-bottom: 2rem;
 }
 
 .card {
@@ -126,6 +127,7 @@ footer {
   background: #fff;
   min-height: 0;  /* NEW */
   min-width: 0;   
+  border-radius: 8px;
   &.open-false {
     transition: all 150ms;
     cursor: pointer;
@@ -137,7 +139,10 @@ footer {
 
   img {
     width: 100%;
-    height: auto;
+    height: 25vh;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 8px 8px 0 0;
   }
 }
 
@@ -171,7 +176,7 @@ a {
   text-align: center;
   font-size: 5em;
   position: relative;
-  margin-bottom: 0.25em;
+  margin: 3rem auto;
   &:before,
   &:after {
     content: "";
@@ -261,4 +266,13 @@ a {
 
 footer {
   background: #222;
+  .copyright{
+    text-align: center;
+    margin: 2rem auto;
+    a{
+      color: #fff;
+      font-weight: 700;
+      text-decoration: none;
+    }
+  }
 }
